@@ -9,21 +9,65 @@
 import SpriteKit
 
 class GameScene: SKScene {
-    override func didMoveToView(view: SKView) {
-        
+    
+    //Scene Objects
+    var arena: Arena!
+    var player: Player!
+    
+    
+    var touchPos = CGPoint()
+    var prevTouchPos = CGPoint()
+    
+    
+    override func didMoveToView(view: SKView)
+    {
+        SetupWorld()
+        SetupPlayer()
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent)
+    {
         /* Called when a touch begins */
         
-        for touch: AnyObject in touches {
+        SetTouchPos(touches)
+        prevTouchPos = touchPos
+    }
+    override func touchesMoved(touches: NSSet, withEvent event: UIEvent)
+    {
+        SetTouchPos(touches)
+        var direction = (touchPos - prevTouchPos).GetCGVector()
+        player.Move(direction)
+        
+    }
+    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+        SetTouchPos(touches)
+        var direction = (touchPos - prevTouchPos).GetCGVector()
+        player.Move(direction)
+    }
+    func SetTouchPos(touches: NSSet)
+    {
+        for touch: AnyObject in touches
+        {
             let location = touch.locationInNode(self)
-            
-            
+            touchPos.x = location.x - self.size.width * 0.5
+            touchPos.y = (location.y * -1.0) + self.size.height * 0.5
         }
     }
-   
+    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+    }
+    
+    func SetupWorld()
+    {
+        arena = Arena()
+        addChild(arena.skNode)
+        self.physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
+        
+    }
+    func SetupPlayer()
+    {
+        player = Player()
+        addChild(player.skNode)
     }
 }

@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		7A1DC2EA1A8FAA020055777E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DC2E91A8FAA020055777E /* AppDelegate.swift */; };
-		7A1DC2EC1A8FAA020055777E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7A1DC2EB1A8FAA020055777E /* GameScene.sks */; };
 		7A1DC2EE1A8FAA020055777E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DC2ED1A8FAA020055777E /* GameScene.swift */; };
 		7A1DC2F01A8FAA020055777E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DC2EF1A8FAA020055777E /* GameViewController.swift */; };
 		7A1DC2F31A8FAA020055777E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A1DC2F11A8FAA020055777E /* Main.storyboard */; };
 		7A1DC2F51A8FAA020055777E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A1DC2F41A8FAA020055777E /* Images.xcassets */; };
 		7A1DC2F81A8FAA020055777E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A1DC2F61A8FAA020055777E /* LaunchScreen.xib */; };
 		7A1DC3041A8FAA020055777E /* BouncelutionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DC3031A8FAA020055777E /* BouncelutionTests.swift */; };
+		7A29AA1C1A92678200FCB465 /* Arena.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A29AA1B1A92678200FCB465 /* Arena.swift */; };
+		7AC26DB91A9254E300C9E44E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC26DB81A9254E300C9E44E /* Extensions.swift */; };
+		7AC26DBB1A9255E200C9E44E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC26DBA1A9255E200C9E44E /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +33,6 @@
 		7A1DC2E41A8FAA020055777E /* Bouncelution.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bouncelution.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A1DC2E81A8FAA020055777E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A1DC2E91A8FAA020055777E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7A1DC2EB1A8FAA020055777E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		7A1DC2ED1A8FAA020055777E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		7A1DC2EF1A8FAA020055777E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		7A1DC2F21A8FAA020055777E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,6 +41,9 @@
 		7A1DC2FD1A8FAA020055777E /* BouncelutionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BouncelutionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A1DC3021A8FAA020055777E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A1DC3031A8FAA020055777E /* BouncelutionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BouncelutionTests.swift; sourceTree = "<group>"; };
+		7A29AA1B1A92678200FCB465 /* Arena.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arena.swift; sourceTree = "<group>"; };
+		7AC26DB81A9254E300C9E44E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7AC26DBA1A9255E200C9E44E /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,13 +86,15 @@
 			isa = PBXGroup;
 			children = (
 				7A1DC2E91A8FAA020055777E /* AppDelegate.swift */,
-				7A1DC2EB1A8FAA020055777E /* GameScene.sks */,
 				7A1DC2ED1A8FAA020055777E /* GameScene.swift */,
 				7A1DC2EF1A8FAA020055777E /* GameViewController.swift */,
 				7A1DC2F11A8FAA020055777E /* Main.storyboard */,
 				7A1DC2F41A8FAA020055777E /* Images.xcassets */,
 				7A1DC2F61A8FAA020055777E /* LaunchScreen.xib */,
 				7A1DC2E71A8FAA020055777E /* Supporting Files */,
+				7AC26DB81A9254E300C9E44E /* Extensions.swift */,
+				7AC26DBA1A9255E200C9E44E /* Player.swift */,
+				7A29AA1B1A92678200FCB465 /* Arena.swift */,
 			);
 			path = Bouncelution;
 			sourceTree = "<group>";
@@ -200,7 +206,6 @@
 			files = (
 				7A1DC2F81A8FAA020055777E /* LaunchScreen.xib in Resources */,
 				7A1DC2F51A8FAA020055777E /* Images.xcassets in Resources */,
-				7A1DC2EC1A8FAA020055777E /* GameScene.sks in Resources */,
 				7A1DC2F31A8FAA020055777E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +227,9 @@
 				7A1DC2EE1A8FAA020055777E /* GameScene.swift in Sources */,
 				7A1DC2F01A8FAA020055777E /* GameViewController.swift in Sources */,
 				7A1DC2EA1A8FAA020055777E /* AppDelegate.swift in Sources */,
+				7AC26DBB1A9255E200C9E44E /* Player.swift in Sources */,
+				7AC26DB91A9254E300C9E44E /* Extensions.swift in Sources */,
+				7A29AA1C1A92678200FCB465 /* Arena.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +423,7 @@
 				7A1DC3091A8FAA020055777E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A1DC30A1A8FAA020055777E /* Build configuration list for PBXNativeTarget "BouncelutionTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +432,7 @@
 				7A1DC30C1A8FAA020055777E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
