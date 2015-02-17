@@ -22,8 +22,8 @@ struct PhysicsConfig
     static var playerCotactBitMask: UInt32 = PhysicsConfig.arenaLayer// | PhysicsConfig.enemyLayer
     static var enemyContactBitMask: UInt32 = PhysicsConfig.arenaLayer// | PhysicsConfig.playerLayer
     
-    static var playerCollisionBitMask: UInt32 = PhysicsConfig.enemyLayer
-    static var enemyCollisionBitMask: UInt32 = PhysicsConfig.playerLayer
+    static var playerCollisionBitMask: UInt32 = PhysicsConfig.enemyLayer | PhysicsConfig.arenaLayer
+    static var enemyCollisionBitMask: UInt32 = PhysicsConfig.playerLayer | PhysicsConfig.arenaLayer
     
     
 }

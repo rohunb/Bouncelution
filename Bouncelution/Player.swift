@@ -35,6 +35,8 @@ class Player
     func Move(direction: CGVector)
     {
         skNode.physicsBody?.velocity = direction * speed
+        //skNode.physicsBody?.applyImpulse(direction * speed )
+        
         var angle = atan2(direction.dy, direction.dx)
         skNode.zRotation = angle
     }
