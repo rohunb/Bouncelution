@@ -23,12 +23,12 @@ class GameScene: SKScene {
     {
         SetupWorld()
         SetupPlayer()
+        println("Scene Setup Complete")
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent)
     {
         /* Called when a touch begins */
-        
         SetTouchPos(touches)
         prevTouchPos = touchPos
     }
@@ -48,7 +48,7 @@ class GameScene: SKScene {
     {
         for touch: AnyObject in touches
         {
-            let location = touch.locationInNode(self)
+            let location = touch.locationInView(self.view)
             touchPos.x = location.x - self.size.width * 0.5
             touchPos.y = (location.y * -1.0) + self.size.height * 0.5
         }

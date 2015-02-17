@@ -21,11 +21,13 @@ class Player
         
         skNode.setScale(0.1)
         skNode.physicsBody = SKPhysicsBody(circleOfRadius: skNode.frame.size.width * 0.5)
-        //skNode.physicsBody?.allowsRotation = false
+        skNode.physicsBody?.allowsRotation = false
         
     }
     func Move(direction: CGVector)
     {
         skNode.physicsBody?.velocity = direction * speed
+        var angle = atan2(direction.dy, direction.dx)
+        skNode.zRotation = angle
     }
 }
