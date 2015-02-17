@@ -22,7 +22,14 @@ class Player
         skNode.setScale(0.1)
         //skNode.physicsBody = SKPhysicsBody(circleOfRadius: skNode.frame.size.width * 0.5)
         skNode.physicsBody = SKPhysicsBody(rectangleOfSize: skNode.size)
+        
+        skNode.physicsBody?.categoryBitMask = PhysicsConfig.playerLayer
+        skNode.physicsBody?.contactTestBitMask = PhysicsConfig.playerCotactBitMask
+        skNode.physicsBody?.collisionBitMask = PhysicsConfig.playerCollisionBitMask
+        
         skNode.physicsBody?.allowsRotation = false
+        skNode.physicsBody?.restitution = 0.0
+        
         
     }
     func Move(direction: CGVector)

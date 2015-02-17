@@ -19,6 +19,9 @@ class Enemy
         skNode = SKSpriteNode(imageNamed: "medium_tank")
         skNode.setScale(0.6)
         skNode.physicsBody = SKPhysicsBody(rectangleOfSize: skNode.size)
+        skNode.physicsBody?.categoryBitMask = PhysicsConfig.enemyLayer
+        skNode.physicsBody?.contactTestBitMask = PhysicsConfig.enemyContactBitMask
+        skNode.physicsBody?.collisionBitMask = PhysicsConfig.enemyCollisionBitMask
         speed  = 1.0
     }
 }

@@ -15,6 +15,8 @@ class GameScene: SKScene {
     var player: Player!
     var enemy: Enemy!
     
+
+    
     
     var touchPos = CGPoint()
     var prevTouchPos = CGPoint()

@@ -22,6 +22,8 @@ class Arena
         CGPathAddArc(circlePath, nil, 0, 0, skNode.frame.width * 0.5, CGFloat(0.0), CGFloat(M_PI * 2), true)
         var border = SKPhysicsBody(edgeLoopFromPath: circlePath)
         skNode.physicsBody = border;
+        skNode.physicsBody?.categoryBitMask = PhysicsConfig.arenaLayer
+
 
     }
 }
