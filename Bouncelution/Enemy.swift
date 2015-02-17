@@ -11,5 +11,14 @@ import SpriteKit
 
 class Enemy
 {
+    var skNode: SKSpriteNode
+    var speed: CGFloat
     
+    init()
+    {
+        skNode = SKSpriteNode(imageNamed: "medium_tank")
+        skNode.setScale(0.6)
+        skNode.physicsBody = SKPhysicsBody(rectangleOfSize: skNode.size)
+        speed  = 1.0
+    }
 }

@@ -20,7 +20,8 @@ class Player
         speed = 1.0
         
         skNode.setScale(0.1)
-        skNode.physicsBody = SKPhysicsBody(circleOfRadius: skNode.frame.size.width * 0.5)
+        //skNode.physicsBody = SKPhysicsBody(circleOfRadius: skNode.frame.size.width * 0.5)
+        skNode.physicsBody = SKPhysicsBody(rectangleOfSize: skNode.size)
         skNode.physicsBody?.allowsRotation = false
         
     }

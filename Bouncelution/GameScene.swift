@@ -13,6 +13,7 @@ class GameScene: SKScene {
     //Scene Objects
     var arena: Arena!
     var player: Player!
+    var enemy: Enemy!
     
     
     var touchPos = CGPoint()
@@ -22,7 +23,9 @@ class GameScene: SKScene {
     override func didMoveToView(view: SKView)
     {
         SetupWorld()
+        SetupEnemies()
         SetupPlayer()
+                
         println("Scene Setup Complete")
     }
     
@@ -69,5 +72,10 @@ class GameScene: SKScene {
     {
         player = Player()
         addChild(player.skNode)
+    }
+    func SetupEnemies()
+    {
+        enemy = Enemy()
+        addChild(enemy.skNode)
     }
 }
